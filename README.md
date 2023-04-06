@@ -18,3 +18,16 @@ Algoritmanın çalışma şekli şu şekildedir:
     5-Eşleşen bir desen bulunana kadar adım 3 ve 4 tekrarlanır. Eğer desen bulunamazsa, arama işlemi sonlandırılır.
 
 Horspool algoritması, büyük metinlerde ve desenlerde hızlı arama işlemleri yapmak için kullanılabilir. Özellikle, DNA dizileri gibi uzun metinlerde arama yapmak için etkili bir yöntemdir. Ayrıca, sözcük işlemcilerinde ve düzenli ifadelerde kullanılan bir arama algoritmasıdır.
+<br><br>
+
+### Horspool algoritması Çalışma zamanı analizi ve En iyi, En Kötü, Ortalama sınırları açıklamalı olarak belirtilecektir. Sadece sınır belirtilmeyecektir, nasıl bulunduğu anlatılacaktır:
+
+Horspool algoritmasının çalışma zamanı, desenin her bir karakteri için kaydırma tablosunun oluşturulması için O(m) ve desenin metin içinde aranması için O(n) olmak üzere toplamda O(m+n)'dir. Burada m desen uzunluğu, n ise metin uzunluğudur.
+
+    1- En iyi durum, aranan desenin metinde ilk karakterde eşleştiği durumdur. Bu durumda, algoritmanın çalışma zamanı O(m) olacaktır.
+
+    2-En kötü durum, aranan desenin metinde hiçbir yerde eşleşmediği durumdur. Bu durumda, algoritmanın çalışma zamanı O(mn)'dir. Ancak, kaydırma tablosu oluşturma aşamasında desendeki tekrar eden karakterlerin sayısı az ise, bu durumda kaydırma tablosu oluşturma aşaması da O(m) olacaktır.
+
+    3-Ortalama durum, kaydırma tablosunun etkin kullanımı nedeniyle en kötü durumdan daha iyi performans sağlar. Desenin sık tekrar eden karakterlere sahip olduğu durumlarda daha etkili olabilir.
+
+Horspool algoritması, boyutu büyük olan metinlerde ve desenlerde etkili bir şekilde arama yapabilen bir algoritmadır. Ancak, desendeki tekrar eden karakterlerin sayısı az ise, algoritmanın performansı düşük olabilir.
