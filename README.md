@@ -1,0 +1,2 @@
+# Horspool_Algoritmasi
+ 
